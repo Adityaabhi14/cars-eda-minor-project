@@ -1,0 +1,33 @@
+name: Verify cars EDA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyse:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - name: Install verified dependencies
+        run: python -m pip install -r requirements-lock.txt
+      - name: Check dependency consistency
+        run: python -m pip check
+      - name: Test cleaning decisions
+        run: python Padmavari_Aditya_Cars_EDA_Project.py --self-test
+      - name: Run full analysis and verify PDF
+        run: python Padmavari_Aditya_Cars_EDA_Project.py --report-date 2026-11-19

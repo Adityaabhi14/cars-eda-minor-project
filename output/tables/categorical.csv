@@ -1,0 +1,9 @@
+column,unique,mode,mode_count,mode_share_percent
+make,22,toyota,32,15.609756
+fuel-type,2,gas,185,90.243902
+aspiration,2,std,168,81.951220
+body-style,5,sedan,96,46.829268
+drive-wheels,3,fwd,120,58.536585
+engine-location,2,front,202,98.536585
+engine-type,7,ohc,148,72.195122
+fuel-system,8,mpfi,94,45.853659

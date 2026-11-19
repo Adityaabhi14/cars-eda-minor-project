@@ -1,0 +1,349 @@
+{
+  "metadata": {
+    "student": "Padmavari Aditya",
+    "batch": "AI",
+    "report_date": "2026-11-19"
+  },
+  "source": {
+    "page": "https://archive.ics.uci.edu/dataset/10/automobile",
+    "doi": "https://doi.org/10.24432/C5B01C",
+    "archive": "https://archive.ics.uci.edu/static/public/10/automobile.zip",
+    "data_sha256": "125db8bd36a84801f7223faf54071d15f85f26c13a9a7aee63375ac46098fb7f",
+    "matches_documented_uci_source": true
+  },
+  "audit": {
+    "raw_shape": [
+      205,
+      26
+    ],
+    "clean_shape": [
+      205,
+      26
+    ],
+    "raw_exact_duplicates": 0,
+    "duplicates_after_normalization": 0,
+    "missing_before": {
+      "symboling": 0,
+      "normalized-losses": 41,
+      "make": 0,
+      "fuel-type": 0,
+      "aspiration": 0,
+      "num-of-doors": 2,
+      "body-style": 0,
+      "drive-wheels": 0,
+      "engine-location": 0,
+      "wheel-base": 0,
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "curb-weight": 0,
+      "engine-type": 0,
+      "num-of-cylinders": 0,
+      "engine-size": 0,
+      "fuel-system": 0,
+      "bore": 4,
+      "stroke": 4,
+      "compression-ratio": 0,
+      "horsepower": 2,
+      "peak-rpm": 2,
+      "city-mpg": 0,
+      "highway-mpg": 0,
+      "price": 4
+    },
+    "missing_after": {
+      "symboling": 0,
+      "normalized-losses": 41,
+      "make": 0,
+      "fuel-type": 0,
+      "aspiration": 0,
+      "num-of-doors": 2,
+      "body-style": 0,
+      "drive-wheels": 0,
+      "engine-location": 0,
+      "wheel-base": 0,
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "curb-weight": 0,
+      "engine-type": 0,
+      "num-of-cylinders": 0,
+      "engine-size": 0,
+      "fuel-system": 0,
+      "bore": 4,
+      "stroke": 4,
+      "compression-ratio": 0,
+      "horsepower": 2,
+      "peak-rpm": 2,
+      "city-mpg": 0,
+      "highway-mpg": 0,
+      "price": 4
+    },
+    "normalization_changes": {
+      "symboling": 0,
+      "normalized-losses": 0,
+      "make": 0,
+      "fuel-type": 0,
+      "aspiration": 0,
+      "num-of-doors": 0,
+      "body-style": 0,
+      "drive-wheels": 0,
+      "engine-location": 0,
+      "wheel-base": 0,
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "curb-weight": 0,
+      "engine-type": 0,
+      "num-of-cylinders": 0,
+      "engine-size": 0,
+      "fuel-system": 0,
+      "bore": 0,
+      "stroke": 0,
+      "compression-ratio": 0,
+      "horsepower": 0,
+      "peak-rpm": 0,
+      "city-mpg": 0,
+      "highway-mpg": 0,
+      "price": 0
+    },
+    "make_label_corrections": {
+      "alfa-romero": 3,
+      "peugot": 11
+    },
+    "numeric_conversion_errors": {
+      "symboling": 0,
+      "normalized-losses": 0,
+      "num-of-doors": 0,
+      "wheel-base": 0,
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "curb-weight": 0,
+      "num-of-cylinders": 0,
+      "engine-size": 0,
+      "bore": 0,
+      "stroke": 0,
+      "compression-ratio": 0,
+      "horsepower": 0,
+      "peak-rpm": 0,
+      "city-mpg": 0,
+      "highway-mpg": 0,
+      "price": 0
+    },
+    "invalid_domain_values": {
+      "symboling": 0,
+      "normalized-losses": 0,
+      "num-of-doors": 0,
+      "wheel-base": 0,
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "curb-weight": 0,
+      "num-of-cylinders": 0,
+      "engine-size": 0,
+      "bore": 0,
+      "stroke": 0,
+      "compression-ratio": 0,
+      "horsepower": 0,
+      "peak-rpm": 0,
+      "city-mpg": 0,
+      "highway-mpg": 0,
+      "price": 0
+    },
+    "unknown_category_counts": {
+      "make": 0,
+      "fuel-type": 0,
+      "aspiration": 0,
+      "body-style": 0,
+      "drive-wheels": 0,
+      "engine-location": 0,
+      "engine-type": 0,
+      "fuel-system": 0
+    },
+    "price_analysis_rows": 201,
+    "decisions": [
+      "Interpret '?' and blank/null-like tokens as missing, rather than as categories or zero.",
+      "Strip surrounding whitespace and normalize category case before checking duplicates.",
+      "Correct make labels alfa-romero -> alfa-romeo and peugot -> peugeot; preserve the raw source.",
+      "Parse 18 numerical columns, including word-encoded door/cylinder counts; symboling remains ordinal.",
+      "Set nonnumeric, nonfinite, or impossible values to missing and record their counts.",
+      "Remove only exact duplicates across all 26 normalized fields; retain differing variants.",
+      "Keep missing numerical values, without imputation; use complete observations for each question.",
+      "Keep plausible IQR outliers: an unusual luxury or performance car is not automatically a data error."
+    ]
+  },
+  "charts": [
+    {
+      "number": 1,
+      "file": "01_price_distribution.png",
+      "type": "histogram",
+      "title": "Price distribution",
+      "observation": "The mean price is 13,207, compared with a median of 10,295; sample skewness is 1.81. The higher mean and long upper tail indicate right skew."
+    },
+    {
+      "number": 2,
+      "file": "02_make_counts.png",
+      "type": "bar",
+      "title": "Most represented makes",
+      "observation": "Toyota contributes 32 of 205 records (15.6%). The dataset contains 22 makes; these counts describe dataset composition, not market share."
+    },
+    {
+      "number": 3,
+      "file": "03_fuel_counts.png",
+      "type": "bar",
+      "title": "Fuel-type representation",
+      "observation": "gas: 185 records (90.2%); diesel: 20 records (9.8%). The imbalance limits comparisons between fuel groups."
+    },
+    {
+      "number": 4,
+      "file": "04_price_by_body_style.png",
+      "type": "box",
+      "title": "Price by body style",
+      "observation": "Hardtop cars have the highest group median (19,688; n=8). Group sizes differ; the boxes show spread, and isolated points are IQR flags rather than proven errors."
+    },
+    {
+      "number": 5,
+      "file": "05_engine_size_price.png",
+      "type": "scatter",
+      "title": "Engine size, price, and fuel type",
+      "observation": "Engine size and price have Pearson r=0.872 across 201 complete pairs. Fuel colour adds a third variable; the pooled association does not isolate an engine-size effect or establish causation."
+    },
+    {
+      "number": 6,
+      "file": "06_horsepower_highway_mpg.png",
+      "type": "scatter",
+      "title": "Horsepower and fuel economy",
+      "observation": "Horsepower and highway MPG have Pearson r=-0.771 (n=203). Higher-power cars tend to have lower fuel economy in this sample; MPG measures efficiency, not distance driven."
+    },
+    {
+      "number": 7,
+      "file": "07_correlation_heatmap.png",
+      "type": "heatmap",
+      "title": "Numerical feature relationships",
+      "observation": "City and highway MPG are closely related (r=0.971). Cell sample sizes range from 199 to 205 because missing values are excluded pair by pair. Correlations involving similar measurements can be redundant."
+    },
+    {
+      "number": 8,
+      "file": "08_mean_price_by_make.png",
+      "type": "bar",
+      "title": "Mean prices by make",
+      "observation": "Among makes with at least five priced records, mercedes-benz has the highest mean price (33,647; n=8). Only the top eight eligible makes are shown; the minimum count reduces very small-group comparisons but does not remove sampling bias."
+    }
+  ],
+  "findings": [
+    "Prices are right-skewed: mean 13,207, median 10,295, skewness 1.81 across 201 known prices.",
+    "Toyota is the most represented make: 32/205 records (15.6%). This is sample composition, not market share.",
+    "The fuel mix is imbalanced: gas 185, diesel 20.",
+    "Larger engines are associated with higher prices: Pearson r=0.872 using 201 complete pairs.",
+    "Horsepower is negatively associated with highway MPG: Pearson r=-0.771 using 203 complete pairs.",
+    "mercedes-benz has the highest mean price among makes with at least five known prices: 33,647 (n=8).",
+    "The price IQR rule flags 14/201 records outside [-5,312, 29,588]. These observations are retained."
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "2.3.3",
+    "numpy": "2.5.5",
+    "matplotlib": "3.11.2",
+    "reportlab": "4.5.1"
+  },
+  "correlations": {
+    "price": {
+      "price": 1.0,
+      "engine-size": 0.8723351674455182,
+      "horsepower": 0.810533082132206,
+      "curb-weight": 0.8344145257702849,
+      "city-mpg": -0.6865710067844684,
+      "highway-mpg": -0.7046922650589529
+    },
+    "engine-size": {
+      "price": 0.8723351674455182,
+      "engine-size": 1.0,
+      "horsepower": 0.8107725559959578,
+      "curb-weight": 0.850594073426277,
+      "city-mpg": -0.6536579163114195,
+      "highway-mpg": -0.6774699078386522
+    },
+    "horsepower": {
+      "price": 0.810533082132206,
+      "engine-size": 0.8107725559959578,
+      "horsepower": 1.0,
+      "curb-weight": 0.7510342745864705,
+      "city-mpg": -0.8036201591529716,
+      "highway-mpg": -0.7709076931171822
+    },
+    "curb-weight": {
+      "price": 0.8344145257702849,
+      "engine-size": 0.850594073426277,
+      "horsepower": 0.7510342745864705,
+      "curb-weight": 1.0,
+      "city-mpg": -0.757413784505601,
+      "highway-mpg": -0.7974647922811803
+    },
+    "city-mpg": {
+      "price": -0.6865710067844684,
+      "engine-size": -0.6536579163114195,
+      "horsepower": -0.8036201591529716,
+      "curb-weight": -0.757413784505601,
+      "city-mpg": 1.0,
+      "highway-mpg": 0.9713370423425045
+    },
+    "highway-mpg": {
+      "price": -0.7046922650589529,
+      "engine-size": -0.6774699078386522,
+      "horsepower": -0.7709076931171822,
+      "curb-weight": -0.7974647922811803,
+      "city-mpg": 0.9713370423425045,
+      "highway-mpg": 1.0
+    }
+  },
+  "correlation_pair_counts": {
+    "price": {
+      "price": 201,
+      "engine-size": 201,
+      "horsepower": 199,
+      "curb-weight": 201,
+      "city-mpg": 201,
+      "highway-mpg": 201
+    },
+    "engine-size": {
+      "price": 201,
+      "engine-size": 205,
+      "horsepower": 203,
+      "curb-weight": 205,
+      "city-mpg": 205,
+      "highway-mpg": 205
+    },
+    "horsepower": {
+      "price": 199,
+      "engine-size": 203,
+      "horsepower": 203,
+      "curb-weight": 203,
+      "city-mpg": 203,
+      "highway-mpg": 203
+    },
+    "curb-weight": {
+      "price": 201,
+      "engine-size": 205,
+      "horsepower": 203,
+      "curb-weight": 205,
+      "city-mpg": 205,
+      "highway-mpg": 205
+    },
+    "city-mpg": {
+      "price": 201,
+      "engine-size": 205,
+      "horsepower": 203,
+      "curb-weight": 205,
+      "city-mpg": 205,
+      "highway-mpg": 205
+    },
+    "highway-mpg": {
+      "price": 201,
+      "engine-size": 205,
+      "horsepower": 203,
+      "curb-weight": 205,
+      "city-mpg": 205,
+      "highway-mpg": 205
+    }
+  }
+}

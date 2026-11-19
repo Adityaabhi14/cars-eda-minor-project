@@ -1,0 +1,27 @@
+column,raw_dtype,clean_dtype,kind,description
+symboling,string,Int64,numerical,"Insurance risk rating; ordinal, not a measured quantity"
+normalized-losses,string,float64,numerical,Normalized relative insurance loss payment
+make,string,string,categorical,Vehicle manufacturer
+fuel-type,string,string,categorical,Gas or diesel
+aspiration,string,string,categorical,Standard or turbo aspiration
+num-of-doors,string,Int64,numerical,Door count; word labels converted to counts
+body-style,string,string,categorical,Vehicle body category
+drive-wheels,string,string,categorical,"Drive arrangement: fwd, rwd, or 4wd"
+engine-location,string,string,categorical,Front or rear engine
+wheel-base,string,float64,numerical,Wheel base (source units)
+length,string,float64,numerical,Length (source units)
+width,string,float64,numerical,Width (source units)
+height,string,float64,numerical,Height (source units)
+curb-weight,string,float64,numerical,Curb weight (source units)
+engine-type,string,string,categorical,Engine construction
+num-of-cylinders,string,Int64,numerical,Cylinder count; word labels converted to counts
+engine-size,string,float64,numerical,Engine size (source units)
+fuel-system,string,string,categorical,Fuel delivery system
+bore,string,float64,numerical,Bore (source units)
+stroke,string,float64,numerical,Stroke (source units)
+compression-ratio,string,float64,numerical,Compression ratio
+horsepower,string,float64,numerical,Reported horsepower
+peak-rpm,string,float64,numerical,Engine speed in RPM
+city-mpg,string,float64,numerical,City fuel economy in MPG
+highway-mpg,string,float64,numerical,Highway fuel economy in MPG
+price,string,float64,numerical,Listed price (source units)

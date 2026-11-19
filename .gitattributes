@@ -1,0 +1,11 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.csv text eol=lf
+*.data text eol=lf
+*.pdf binary
+*.png binary
+# Preserve the original source bytes and their documented checksums on all OSes.
+data/imports-85.data -text -eol
+data/imports-85.names -text -eol -whitespace
